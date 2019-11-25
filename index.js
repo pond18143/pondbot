@@ -1,5 +1,5 @@
 //......................sendgrid........................
-const MailSent = "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";
+const MailSent = "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"
 const Mail = require("@sendgrid/mail");
 Mail.setApiKey(MailSent);
 
@@ -78,9 +78,9 @@ function handleMessageEvent(event) {
     
 
         
-    } else if (eventText === 'khan') {
+    } else if (eventText === 'qr') {
 
-        image = "https://f.ptcdn.info/282/053/000/ovbkaf4eeMxg6TLlIZx-o.jpg"
+        image = "https://uppic.cc/d/5UEF"
         msg = {
             'type': 'image',
             'originalContentUrl': image,
@@ -183,9 +183,9 @@ function handleMessageEvent(event) {
     msg = {
             "type": "location",
             "title": "my location",
-            "address": "〒150-0002 東京都渋谷区渋谷２丁目２１−１",
-            "latitude": 35.65910807942215,
-            "longitude": 139.70372892916203
+            "address": "Sam Phran, Nakhon Pathom 73110, Thailand",
+            "latitude": 13.702733,
+            "longitude": 100.198928
         }
     } else if (eventText === 'template button') {
         msg = {
@@ -211,25 +211,25 @@ function handleMessageEvent(event) {
                 }]
             }
         }
-    } else if (eventText === 'template confirm') {
+    } else if (eventText === 'hello') {
         msg = {
             "type": "template",
             "altText": "this is a confirm template",
             "template": {
                 "type": "confirm",
-                "text": "Are you sure?",
+                "text": "Say Hello",
                 "actions": [{
                     "type": "message",
-                    "label": "Yes",
-                    "text": "yes"
+                    "label": "สวัสดีครับ",
+                    "text": "สวัสดีครับ"
                 }, {
                     "type": "message",
-                    "label": "No",
-                    "text": "no"
+                    "label": "สวัสดีค่ะ",
+                    "text": "สวัสดีค่ะ"
                 }]
             }
         }
-    } else if (eventText === 'carousel') {
+    } else if (eventText === 'slide') {
         msg = {
             "type": "template",
             "altText": "this is a carousel template",
@@ -237,45 +237,45 @@ function handleMessageEvent(event) {
                 "type": "carousel",
                 "columns": [
                     {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        "thumbnailImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwcMz1Cm7hKlQ2-HiLSKDk9CY6eI-7ncGFYPSDxgs-5wUkT2KL&s",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [
                             {
                                 "type": "postback",
-                                "label": "Buy",
+                                "label": "test1",
                                 "data": "action=buy&itemid=111"
                             },
                             {
                                 "type": "postback",
-                                "label": "Add to cart",
+                                "label": "test2",
                                 "data": "action=add&itemid=111"
                             },
                             {
                                 "type": "uri",
-                                "label": "View detail",
+                                "label": "test3",
                                 "uri": "http://example.com/page/111"
                             }
                         ]
                     },
                     {
-                        "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                        "thumbnailImageUrl": "https://www.fungjaizine.com/wp-content/uploads/2019/06/medium-athah-anime-jojo-s-bizarre-adventure-the-hand-okuyasu-original-imaf9hc8zsjsbk5t.jpeg",
                         "title": "this is menu",
                         "text": "description",
                         "actions": [
                             {
                                 "type": "postback",
-                                "label": "Buy",
+                                "label": "test4",
                                 "data": "action=buy&itemid=222"
                             },
                             {
                                 "type": "postback",
-                                "label": "Add to cart",
+                                "label": "test5",
                                 "data": "action=add&itemid=222"
                             },
                             {
                                 "type": "uri",
-                                "label": "View detail",
+                                "label": "test6",
                                 "uri": "http://example.com/page/222"
                             }
                         ]
