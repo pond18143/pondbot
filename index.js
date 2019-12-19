@@ -255,17 +255,17 @@ function handleMessageEvent(event) {
                         "actions": [
                             {
                                 "type": "postback",
-                                "label": "test1",
+                                "label": "Vegetable1",
                                 "data": "action=buy&itemid=111"
                             },
                             {
                                 "type": "postback",
-                                "label": "test2",
+                                "label": "Vegetable2",
                                 "data": "action=add&itemid=111"
                             },
                             {
                                 "type": "uri",
-                                "label": "test3",
+                                "label": "Vegetable3",
                                 "uri": "http://example.com/page/111"
                             }
                         ]
@@ -277,17 +277,17 @@ function handleMessageEvent(event) {
                         "actions": [
                             {
                                 "type": "postback",
-                                "label": "test4",
+                                "label": "tVegetable4",
                                 "data": "action=buy&itemid=222"
                             },
                             {
                                 "type": "postback",
-                                "label": "test5",
+                                "label": "Vegetable5",
                                 "data": "action=add&itemid=222"
                             },
                             {
                                 "type": "uri",
-                                "label": "test6",
+                                "label": "Vegetable6",
                                 "uri": "http://example.com/page/222"
                             }
                         ]
