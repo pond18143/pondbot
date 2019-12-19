@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gie3d/nonglinebot.git"
+    "url": "git+https://github.com/pond18143/pondbot"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gie3d/nonglinebot/issues"
+    "url": "https://github.com/pond18143/pondbot/issues"
   },
-  "homepage": "https://github.com/gie3d/nonglinebot#readme",
+  "homepage": "https://github.com/pond18143/pondbot#readme",
   "dependencies": {
     "@line/bot-sdk": "^2.0.0",
     "@sendgrid/mail": "^6.4.0",
