@@ -387,7 +387,7 @@ function handleMessageEvent(event) {
                 "style": "primary",
                 "height": "sm",
                 "action": {
-                 "type": "uri",
+                 "type": "url",
                  "label": "Web site",
                  "uri": "http://thaiorganicplatform.com/#/home"
                 }
@@ -396,7 +396,7 @@ function handleMessageEvent(event) {
              }
             }
            }
-        }
+    }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
 }
