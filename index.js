@@ -298,7 +298,7 @@ function handleMessageEvent(event) {
     } else if (eventText === 'line quick reply'){
         msg = {
         "type": "text",
-        "text": "Hello Quick Reply!",
+        "text": "Quick Reply!",
         "quickReply": {
           "items": [
             {
@@ -356,7 +356,7 @@ function handleMessageEvent(event) {
           ]
         }
       }
-    } else if (eventText === image){
+    } else if (eventText === imageUrl){
         msg = {
             "type": "text",
             "text": "Hello Quick Reply!",
