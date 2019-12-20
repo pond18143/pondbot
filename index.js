@@ -295,7 +295,7 @@ function handleMessageEvent(event) {
                 ]
             }
         }
-    } else if (eventText === 'line quick'){
+    } else if (eventText === 'line quick reply'){
         msg = {
         "type": "text",
         "text": "Hello Quick Reply!",
