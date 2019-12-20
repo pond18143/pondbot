@@ -356,23 +356,23 @@ function handleMessageEvent(event) {
           ]
         }
       }
-    } else if (eventText == imageUrl){
+    } else if (eventText === 'imageUrl'){
         msg = {
-            "type": "text",
-            "text": "Hello Quick Reply!",
-            "quickReply": {
-              "items": [
-                {
-                  "type": "action",
-                  "action": {
-                    "type": "cameraRoll",
-                    "label": "Camera Roll"
+                "type": "text",
+                "text": "Hello Quick Reply!",
+                "quickReply": {
+                 "items": [
+                  {
+                   "type": "action",
+                   "action": {
+                    "type":"cameraRoll",
+                    "label":"Gallery"
+                   }
                   }
+                 ]
                 }
-              ]
             }
         }
-    }
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
 }
 
