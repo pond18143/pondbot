@@ -373,7 +373,7 @@ function handleMessageEvent(event) {
                 "action": {
                  "type": "uri",
                  "label": "Web site",
-                 "uri": "https://developers.line.me"
+                 "uri": "http://thaiorganicplatform.com/#/home"
                 }
                }
               ]
