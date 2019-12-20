@@ -44,7 +44,7 @@ function handleEvent(event) {
 function handleMessageEvent(event) {
     var msg = {
         type: 'text',
-        text: 'สวัสดีครัช'
+        text: 'please choose -> qr for coupon,samphran location,template button,slide,line quick reply,website,gal,pb,day,capture,location,hello'
     };
 
     var eventText = event.message.text.toLowerCase();
@@ -86,7 +86,7 @@ function handleMessageEvent(event) {
     
 
 //พิมqrมาให้ส่งเป็นรูปกลับไป
-    }else if (eventText === 'qr') {
+    }else if (eventText === 'qr for coupon') {
 
         image = "https://uppic.cc/d/5UEF"
         msg = {
@@ -188,7 +188,7 @@ function handleMessageEvent(event) {
         // };
         // Mail.send(mailMessage);
 //ส่งที่อยู่ทีซ็ตไว้
-    }else if (eventText === 'samphran') {
+    }else if (eventText === 'samphran location') {
     msg = {
             "type": "location",
             "title": "my location",
@@ -203,7 +203,7 @@ function handleMessageEvent(event) {
             "altText": "this is a buttons template",
             "template": {
                 "type": "buttons",
-                "thumbnailImageUrl": "https://www.thesun.co.uk/wp-content/uploads/2017/03/fifa-17-2.jpg?strip=all&w=742&quality=100",
+                "thumbnailImageUrl": "https://images.ctfassets.net/cnu0m8re1exe/1W7vPV9bGZLMd1KQlLqhVU/d25e44ecf793111881f1907ea4804d9d/FruitColors.jpg?w=650&h=433&fit=fill",
                 "title": "Menu",
                 "text": "Please select",
                 "actions": [{
@@ -222,7 +222,7 @@ function handleMessageEvent(event) {
             }
         }
 //พิมhelloมาจะมีช่องขึ้นให้เลือก 
-    } else if (eventText === 'camera') {
+    } else if (eventText === 'hello') {
         msg = {
             "type": "text",
             "altText": "Hello Quick reply",
