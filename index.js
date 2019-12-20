@@ -444,7 +444,7 @@ function handleMessageEvent(event) {
         msg = [
             {
              "type": "text",
-             "text": "cmr Quick Reply!",
+             "text": "CMR Quick Reply!",
              "quickReply": {
               "items": [
                {
@@ -459,26 +459,23 @@ function handleMessageEvent(event) {
             }
            ]
     } else if (eventText === 'location'){
-        msg = {
-            "to": "U3c28...",
-            "messages": [
-             {
-              "type": "text",
-              "text": "Hello Quick Reply!",
-              "quickReply": {
-               "items": [
-                {
-                 "type": "action",
-                 "action": {
-                  "type":"location",
-                  "label":"Location"
-                 }
+        msg =[
+            {
+             "type": "text",
+             "text": "Location Quick Reply!",
+             "quickReply": {
+              "items": [
+               {
+                "type": "action",
+                "action": {
+                 "type":"location",
+                 "label":"Location"
                 }
-               ]
-              }
+               }
+              ]
              }
-            ]
-           }
+            }
+           ]
     }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
