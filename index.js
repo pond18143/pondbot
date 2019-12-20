@@ -277,7 +277,7 @@ function handleMessageEvent(event) {
                         "actions": [
                             {
                                 "type": "postback",
-                                "label": "tVegetable4",
+                                "label": "Vegetable4",
                                 "data": "action=buy&itemid=222"
                             },
                             {
@@ -356,22 +356,6 @@ function handleMessageEvent(event) {
           ]
         }
       }
-    } else if (eventText === image){
-        msg = {
-            "type": "text",
-            "text": "Hello Quick Reply!",
-            "quickReply": {
-              "items": [
-                {
-                  "type": "action",
-                  "action": {
-                    "type": "cameraRoll",
-                    "label": "Camera Roll"
-                  }
-                }
-              ]
-            }
-        }
     } else if (eventText === 'website'){
         msg = {
             "type": "flex",
