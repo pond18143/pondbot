@@ -356,7 +356,7 @@ function handleMessageEvent(event) {
           ]
         }
       }
-    } else if (eventText === imageUrl){
+    } else if (eventText === image){
         msg = {
             "type": "text",
             "text": "Hello Quick Reply!",
@@ -387,9 +387,9 @@ function handleMessageEvent(event) {
                 "style": "primary",
                 "height": "sm",
                 "action": {
-                 "type": "url",
+                 "type": "uri",
                  "label": "Web site",
-                 "url": "http://thaiorganicplatform.com/#/home"
+                 "uri": "http://thaiorganicplatform.com/#/home"
                 }
                }
               ]
