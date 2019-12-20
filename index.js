@@ -380,11 +380,11 @@ function handleMessageEvent(event) {
              }
             }
            }]
-    } else if (eventText === 'pic'){
+    } else if (eventText === 'gal'){
         msg = [
             {
              "type": "text",
-             "text": "Hello Quick Reply!",
+             "text": "Gal Quick Reply!",
              "quickReply": {
               "items": [
                {
@@ -398,6 +398,25 @@ function handleMessageEvent(event) {
              }
             }
            ]
+    } else if (eventText === 'pb'){
+        msg = [
+            {
+             "type": "text",
+             "text": "Hello Quick Reply!",
+             "quickReply": {
+              "items": [
+               {
+                "type": "action",
+                "action": {
+                 "type": "postback",
+                 "label": "Postback",
+                 "data": "action=buy&itemid=123"
+                }
+               }
+              ]
+             }
+            }
+            ]
     }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
