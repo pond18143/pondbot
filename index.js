@@ -357,7 +357,7 @@ function handleMessageEvent(event) {
         }
       }
     } else if (eventText === 'website'){
-        msg = {
+        msg = [{
             "type": "flex",
             "altText": "This is a Flex Message",
             "contents": {
@@ -379,7 +379,7 @@ function handleMessageEvent(event) {
               ]
              }
             }
-           }
+           }]
     }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
