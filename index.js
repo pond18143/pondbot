@@ -402,7 +402,7 @@ function handleMessageEvent(event) {
         msg = [
             {
              "type": "text",
-             "text": "Hello Quick Reply!",
+             "text": "post back Quick Reply!",
              "quickReply": {
               "items": [
                {
@@ -417,6 +417,29 @@ function handleMessageEvent(event) {
              }
             }
             ]
+    } else if (eventText === 'day'){
+        msg = [
+            {
+             "type": "text",
+             "text": "date Quick Reply!",
+             "quickReply": {
+              "items": [
+               {
+                "type": "action",
+                "action": {
+                 "type": "datetimepicker",
+                 "label": "Datetime Picker",
+                 "data": "storeId=12345",
+                 "mode": "datetime",
+                 "initial": "2019-12-01T00:00",
+                 "max": "2029-12-31T23:59",
+                 "min": "2001-01-01T00:00"
+                }
+               }
+              ]
+             }
+            }
+           ]
     }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
