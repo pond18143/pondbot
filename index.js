@@ -188,7 +188,7 @@ function handleMessageEvent(event) {
         // };
         // Mail.send(mailMessage);
 //ส่งที่อยู่ทีซ็ตไว้
-    }else if (eventText === 'location') {
+    }else if (eventText === 'samphran') {
     msg = {
             "type": "location",
             "title": "my location",
@@ -440,6 +440,45 @@ function handleMessageEvent(event) {
              }
             }
            ]
+    } else if (eventText === 'capture'){
+        msg = [
+            {
+             "type": "text",
+             "text": "cmr Quick Reply!",
+             "quickReply": {
+              "items": [
+               {
+                "type": "action",
+                "action": {
+                 "type":"camera",
+                 "label":"Camera"
+                }
+               }
+              ]
+             }
+            }
+           ]
+    } else if (eventText === 'location'){
+        msg = {
+            "to": "U3c28...",
+            "messages": [
+             {
+              "type": "text",
+              "text": "Hello Quick Reply!",
+              "quickReply": {
+               "items": [
+                {
+                 "type": "action",
+                 "action": {
+                  "type":"location",
+                  "label":"Location"
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
     }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
