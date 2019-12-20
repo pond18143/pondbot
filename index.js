@@ -356,6 +356,22 @@ function handleMessageEvent(event) {
           ]
         }
       }
+    } else if (eventText === image){
+        msg = {
+            "type": "text",
+            "text": "Hello Quick Reply!",
+            "quickReply": {
+              "items": [
+                {
+                  "type": "action",
+                  "action": {
+                    "type": "cameraRoll",
+                    "label": "Camera Roll"
+                  }
+                }
+              ]
+            }
+        }
     }
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
 }
