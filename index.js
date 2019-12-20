@@ -356,7 +356,7 @@ function handleMessageEvent(event) {
           ]
         }
       }
-    } else if (eventText === 'imageUrl'){
+    } else if (eventText === 'imageurl'){
         msg = {
                 "type": "text",
                 "text": "Hello Quick Reply!",
