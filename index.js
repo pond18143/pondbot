@@ -380,7 +380,7 @@ function handleMessageEvent(event) {
              }
             }
            }]
-    } else if (eventText === 'camera'){
+    } else if (eventText === 'pic'){
         msg = [
             {
              "type": "text",
