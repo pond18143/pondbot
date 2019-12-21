@@ -501,7 +501,7 @@ function handleMessageText(event) {
              }
             }
            ]
-    } else if (eventText === 'buy') {
+    } else if (eventText === 't') {
         msg = {
             "type": "flex",
             "altText": "Flex Message",
@@ -512,7 +512,7 @@ function handleMessageText(event) {
                   "type": "bubble",
                   "hero": {
                     "type": "image",
-                    "url": "https://admin-api.thaiorganicplatform.com/public/upload/product/product-5dc05fdfebcbf3.64054314.png",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_5_carousel.png",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
@@ -524,7 +524,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Avocado",
+                        "text": "Arm Chair, White",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -535,7 +535,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$9",
+                            "text": "$49",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
@@ -563,7 +563,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to Cart",
-                          "uri": "http://thaiorganicplatform.com/#/productdetail/5"
+                          "uri": "https://linecorp.com"
                         },
                         "style": "primary"
                       },
@@ -572,7 +572,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to whishlist",
-                          "uri": "http://thaiorganicplatform.com/#/productdetail/5"
+                          "uri": "https://linecorp.com"
                         }
                       }
                     ]
@@ -580,10 +580,9 @@ function handleMessageText(event) {
                 },
                 {
                   "type": "bubble",
-                  "direction": "ltr",
                   "hero": {
                     "type": "image",
-                    "url": "https://www.prachachat.net/wp-content/uploads/2019/12/สังคมสุขใจ-6.jpg",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
@@ -595,7 +594,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Sugar",
+                        "text": "Metal Desk Lamp",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -607,7 +606,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$5",
+                            "text": "$11",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
@@ -644,7 +643,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to Cart",
-                          "uri": "https://www.prachachat.net/tourism/news-399802"
+                          "uri": "https://linecorp.com"
                         },
                         "flex": 2,
                         "color": "#AAAAAA",
@@ -655,7 +654,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to wish list",
-                          "uri": "https://www.prachachat.net/tourism/news-399802"
+                          "uri": "https://linecorp.com"
                         }
                       }
                     ]
@@ -676,7 +675,6 @@ function handleMessageText(event) {
                           "uri": "https://linecorp.com"
                         },
                         "flex": 1,
-                        "color": "#5B2A2A",
                         "gravity": "center"
                       }
                     ]
