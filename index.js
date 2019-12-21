@@ -594,7 +594,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Sugar",
+                        "text": "Bad avocado",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
