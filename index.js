@@ -582,7 +582,7 @@ function handleMessageText(event) {
                   "type": "bubble",
                   "hero": {
                     "type": "image",
-                    "url": "https://www.prachachat.net/wp-content/uploads/2019/12/สังคมสุขใจ-6.jpg",
+                    "url": "https://admin-api.thaiorganicplatform.com/public/upload/product/product-5dc05fdff0f093.27849305.png",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
