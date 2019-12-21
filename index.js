@@ -33,17 +33,17 @@ app.get('/pond', function (req,res){
 function handleEvent(event){
 
     console.log(event);
-    if (event.type === 'message' && event.message.type === 'text') {//ถ้าเป็นรูปหรือติ้กเกอร์ให้ออกข้างนอก
+    if (event.type === 'message' && event.message.type === 'text') {//เช็คข้อความtext
         handleMessageText(event);
         
-    } else if (event.type === 'message' && event.message.type === 'image'){
+    } else if (event.type === 'message' && event.message.type === 'image'){//เช็ครูป
         handleMessageImage(event)
     }else {
-        return Promise.resolve(null);
+        return Promise.resolve(null);//ถ้าไม่ใช่ทั้งคู่ให้null
     }
 }
 
-function handleMessageImage(event) {
+function handleMessageImage(event) {//ถ้าส่งเป็นรูป จะขึ้นquick location
     console.log("handleMessageImage")
         var msg =[
             {
@@ -320,7 +320,7 @@ function handleMessageText(event) {
                 ]
             }
         }
-    } else if (eventText === 'line quick reply'){
+    } else if (eventText === 'quickreply'){
         msg = {
         "type": "text",
         "text": "Quick Reply!",

@@ -21,9 +21,9 @@
 เข้าline developer >Messaging API >startnow >create newprovider>สร้างchanel>Use webhook:เลือกenabled>Webhook url ระบุเป็น https.ในterminal ngrok (ตามด้วย)/webhook >verifly >webhook url ใน webhook url เอาhttpในngrokมาใส่แล้วเติม 
 เปลี่ยน    channelAccessToken: (process.env.channelAccessToken)เอาChannel access token (long-lived) ในline developมาใส่,     channelSecret: (process.env.channelSecret) เอาChannel secret ในline devekopมาใส่
 
-
-
 เปลี่ยนออโต้ข้อความกลับมา เข้า line business >Greeting Message
 
 สร้าง menu barด้านล่าง Rich Menu Maker สร้างรูปmenubarขึ้นมา(https://lineforbusiness.com/richmenumaker/?source=post_page-----6cf12b394f38----------------------)
  แล้วเข้าไปใน https://manager.line.biz/ รายการด้านซ้าย Rich menu
+
+เพิ่ม function เช็ครูป บรรทัด39
