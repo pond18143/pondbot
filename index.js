@@ -582,7 +582,7 @@ function handleMessageText(event) {
                   "type": "bubble",
                   "hero": {
                     "type": "image",
-                    "url": "https://admin-api.thaiorganicplatform.com/public/upload/product/product-5dc05fdff0f093.27849305.png",
+                    "url": "https://admin-api.thaiorganicplatform.com/public/upload/product/product-5dc05fdfebcbf3.64054314.png",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
