@@ -69,7 +69,7 @@ function handleMessageImage(event) {//ถ้าส่งเป็นรูป �
 function handleMessageText(event) {
     var msg = {
         type: 'text',
-        text: 'please choose -> qr for coupon,samphran location,template button,slide,quickreply,website,gal,pb,day,capture,location,hello,buy,sookjai'
+        text: 'please choose -> qr for coupon,samphran location,template button,slide,quickreply,website,gal,pb,day,capture,location,hello,buy,sookjai,melon,coupon'
     };
 
     var eventText = event.message.text.toLowerCase();
@@ -869,7 +869,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Melom",
+                        "text": "Melon",
                         "size": "xl",
                         "weight": "bold"
                       },
@@ -954,6 +954,179 @@ function handleMessageText(event) {
                         },
                         "color": "#905C44",
                         "style": "primary"
+                      }
+                    ]
+                  }
+                }
+              }
+        }else if (eventText === 'coupon'){
+            msg = {
+                "type": "flex",
+                "altText": "Flex Message",
+                "contents": {
+                  "type": "bubble",
+                  "hero": {
+                    "type": "image",
+                    "url": "https://png.pngtree.com/png-clipart/20190611/original/pngtree-scan-qr-code-png-image_2048910.jpg",
+                    "size": "full",
+                    "aspectRatio": "20:13",
+                    "aspectMode": "cover",
+                    "action": {
+                      "type": "uri",
+                      "label": "Action",
+                      "uri": "https://linecorp.com/"
+                    }
+                  },
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "md",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "THAI ORGANIC PLATFORM",
+                        "size": "xl",
+                        "gravity": "center",
+                        "weight": "bold",
+                        "wrap": true
+                      },
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "margin": "md",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "text",
+                            "text": "4.0",
+                            "flex": 0,
+                            "margin": "md",
+                            "size": "sm",
+                            "color": "#999999"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "spacing": "sm",
+                        "margin": "lg",
+                        "contents": [
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "text": "Date",
+                                "flex": 1,
+                                "size": "sm",
+                                "color": "#AAAAAA"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Monday 25, 9:00PM",
+                                "flex": 4,
+                                "size": "sm",
+                                "color": "#666666",
+                                "wrap": true
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "text": "Place",
+                                "flex": 1,
+                                "size": "sm",
+                                "color": "#AAAAAA"
+                              },
+                              {
+                                "type": "text",
+                                "text": "7 Floor, No.3",
+                                "flex": 4,
+                                "size": "sm",
+                                "color": "#666666",
+                                "wrap": true
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "text": "Seats",
+                                "flex": 1,
+                                "size": "sm",
+                                "color": "#AAAAAA"
+                              },
+                              {
+                                "type": "text",
+                                "text": "C Row, 18 Seat",
+                                "flex": 4,
+                                "size": "sm",
+                                "color": "#666666",
+                                "wrap": true
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "layout": "vertical",
+                            "margin": "xxl",
+                            "contents": [
+                              {
+                                "type": "spacer"
+                              },
+                              {
+                                "type": "image",
+                                "url": "https://scontent.fbkk2-7.fna.fbcdn.net/v/t1.15752-9/80191121_2624391554320068_7598581880098652160_n.png?_nc_cat=106&_nc_oc=AQkqVEvglT9pkrdFLbPiHW-pbH_cOCvzy3geQniNus6a4u2iZ5VkQff3wYYWL9SmvqU&_nc_ht=scontent.fbkk2-7.fna&oh=690865022d2e4dee099ddf3956f3d181&oe=5E6CFABC",
+                                "size": "xl",
+                                "aspectMode": "cover"
+                              },
+                              {
+                                "type": "text",
+                                "text": "You can enter the theater by using this code instead of a ticket",
+                                "margin": "xxl",
+                                "size": "xs",
+                                "color": "#AAAAAA",
+                                "wrap": true
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   }
