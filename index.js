@@ -476,7 +476,25 @@ function handleMessageEvent(event) {
              }
             }
            ]
-    } else if ()
+    } else if (!validImageTypes.includes(fileType)) {
+        msg =[
+            {
+             "type": "text",
+             "text": "Location Quick Reply!",
+             "quickReply": {
+              "items": [
+               {
+                "type": "action",
+                "action": {
+                 "type":"location",
+                 "label":"Location"
+                }
+               }
+              ]
+             }
+            }
+           ]
+    }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
 }
