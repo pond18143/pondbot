@@ -501,7 +501,7 @@ function handleMessageText(event) {
              }
             }
            ]
-    } else if (eventText === 't') {
+    } else if (eventText === 'buy') {
         msg = {
             "type": "flex",
             "altText": "Flex Message",
