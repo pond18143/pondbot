@@ -35,9 +35,9 @@ function handleEvent(event) {
     console.log(event);
     if (event.type === 'message' && event.message.type === 'text') {//ถ้าเป็นรูปหรือติ้กเกอร์ให้ออกข้างนอก
         handleMessageEvent(event);
-    // if (event.type === 'image'){
-    //     handleMessageEvent(event)
-    // }
+    if (event.type === 'message' && event.message.type === ''){
+        handleMessageEvent(event)
+    }
     } else {
         return Promise.resolve(null);
     }
