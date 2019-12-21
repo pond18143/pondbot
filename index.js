@@ -524,7 +524,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Arm Chair, White",
+                        "text": "Avocado",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -535,7 +535,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$49",
+                            "text": "$9",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
@@ -582,7 +582,7 @@ function handleMessageText(event) {
                   "type": "bubble",
                   "hero": {
                     "type": "image",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png",
+                    "url": "https://www.prachachat.net/wp-content/uploads/2019/12/สังคมสุขใจ-6.jpg",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
@@ -594,7 +594,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Metal Desk Lamp",
+                        "text": "Sugar",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -606,7 +606,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$11",
+                            "text": "$5",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
