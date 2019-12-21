@@ -30,20 +30,43 @@ app.get('/pond', function (req,res){
     res.send('pond1');
 });
 
-function handleEvent(event) {
+function handleEvent(event){
 
     console.log(event);
     if (event.type === 'message' && event.message.type === 'text') {//ถ้าเป็นรูปหรือติ้กเกอร์ให้ออกข้างนอก
-        handleMessageEvent(event);
-    if (event.type === 'message' && event.message.type === ''){
-        handleMessageEvent(event)
+        handleMessageText(event);
+    if (event.type === 'message' && event.message.type === 'image'){
+        handleMessageImage(event)
     }
     } else {
         return Promise.resolve(null);
     }
 }
+
+function handleMessageImage(image) {
+    if (eventText === image){
+        msg =[
+            {
+             "type": "text",
+             "text": "Location Quick Reply!",
+             "quickReply": {
+              "items": [
+               {
+                "type": "action",
+                "action": {
+                 "type":"location",
+                 "label":"Location"
+                }
+               }
+              ]
+             }
+            }
+           ]
+    }
+    return client.replyMessage(event.replyToken, msg)
+}
 //ถ้าส่งข้อความอื่นมาให้ตอบไปว่า สวัสดีครัช
-function handleMessageEvent(event) {
+function handleMessageText(event) {
     var msg = {
         type: 'text',
         text: 'please choose -> qr for coupon,samphran location,template button,slide,line quick reply,website,gal,pb,day,capture,location,hello'
