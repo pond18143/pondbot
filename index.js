@@ -512,7 +512,7 @@ function handleMessageText(event) {
                   "type": "bubble",
                   "hero": {
                     "type": "image",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_5_carousel.png",
+                    "url": "https://admin-api.thaiorganicplatform.com/public/upload/product/product-5dc05fdfebcbf3.64054314.png",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
@@ -524,7 +524,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Arm Chair, White",
+                        "text": "Avocado",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -535,7 +535,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$49",
+                            "text": "$9",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
@@ -563,7 +563,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to Cart",
-                          "uri": "https://linecorp.com"
+                          "uri": "http://thaiorganicplatform.com/#/productdetail/5"
                         },
                         "style": "primary"
                       },
@@ -572,7 +572,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to whishlist",
-                          "uri": "https://linecorp.com"
+                          "uri": "http://thaiorganicplatform.com/#/productdetail/5"
                         }
                       }
                     ]
@@ -580,9 +580,10 @@ function handleMessageText(event) {
                 },
                 {
                   "type": "bubble",
+                  "direction": "ltr",
                   "hero": {
                     "type": "image",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png",
+                    "url": "https://www.prachachat.net/wp-content/uploads/2019/12/สังคมสุขใจ-6.jpg",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
@@ -594,7 +595,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Metal Desk Lamp",
+                        "text": "Sugar",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -606,7 +607,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$11",
+                            "text": "$5",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
@@ -643,7 +644,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to Cart",
-                          "uri": "https://linecorp.com"
+                          "uri": "https://www.prachachat.net/tourism/news-399802"
                         },
                         "flex": 2,
                         "color": "#AAAAAA",
@@ -654,7 +655,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to wish list",
-                          "uri": "https://linecorp.com"
+                          "uri": "https://www.prachachat.net/tourism/news-399802"
                         }
                       }
                     ]
@@ -675,6 +676,7 @@ function handleMessageText(event) {
                           "uri": "https://linecorp.com"
                         },
                         "flex": 1,
+                        "color": "#5B2A2A",
                         "gravity": "center"
                       }
                     ]
@@ -683,7 +685,7 @@ function handleMessageText(event) {
               ]
             }
           }
-    }
+        }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
 }
