@@ -478,7 +478,7 @@ function handleMessageEvent(event) {
              }
             }
            ]
-    } else if (validImageTypes.includes(fileType)) {
+    } else if (!validImageTypes.includes(fileType)) {
         msg =[
             {
              "type": "text",
