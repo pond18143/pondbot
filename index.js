@@ -524,7 +524,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Avocado",
+                        "text": "Arm Chair, White",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -535,7 +535,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$9",
+                            "text": "$49",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
@@ -563,7 +563,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to Cart",
-                          "uri": "http://thaiorganicplatform.com/#/productdetail/5"
+                          "uri": "https://linecorp.com"
                         },
                         "style": "primary"
                       },
@@ -572,7 +572,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to whishlist",
-                          "uri": "http://thaiorganicplatform.com/#/productdetail/5"
+                          "uri": "https://linecorp.com"
                         }
                       }
                     ]
@@ -582,7 +582,7 @@ function handleMessageText(event) {
                   "type": "bubble",
                   "hero": {
                     "type": "image",
-                    "url": "https://www.prachachat.net/wp-content/uploads/2019/12/สังคมสุขใจ-6.jpg",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png",
                     "size": "full",
                     "aspectRatio": "20:13",
                     "aspectMode": "cover"
@@ -594,7 +594,7 @@ function handleMessageText(event) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Sugar organic",
+                        "text": "Metal Desk Lamp",
                         "size": "xl",
                         "weight": "bold",
                         "wrap": true
@@ -606,7 +606,7 @@ function handleMessageText(event) {
                         "contents": [
                           {
                             "type": "text",
-                            "text": "$5",
+                            "text": "$11",
                             "flex": 0,
                             "size": "xl",
                             "weight": "bold",
@@ -643,7 +643,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to Cart",
-                          "uri": "https://www.prachachat.net/tourism/news-399802"
+                          "uri": "https://linecorp.com"
                         },
                         "flex": 2,
                         "color": "#AAAAAA",
@@ -654,7 +654,7 @@ function handleMessageText(event) {
                         "action": {
                           "type": "uri",
                           "label": "Add to wish list",
-                          "uri": "https://www.prachachat.net/tourism/news-399802m"
+                          "uri": "https://linecorp.com"
                         }
                       }
                     ]
