@@ -43,9 +43,8 @@ function handleEvent(event){
     }
 }
 
-function handleMessageImage(image) {
-    if (eventText === image){
-        msg =[
+function handleMessageImage(event) {
+        var msg =[
             {
              "type": "text",
              "text": "Location Quick Reply!",
@@ -62,7 +61,7 @@ function handleMessageImage(image) {
              }
             }
            ]
-    }
+    
     return client.replyMessage(event.replyToken, msg)
 }
 //ถ้าส่งข้อความอื่นมาให้ตอบไปว่า สวัสดีครัช
