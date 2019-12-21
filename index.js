@@ -839,6 +839,126 @@ function handleMessageText(event) {
                   }
                 }
               }
+        }else if (eventText === 'melon'){
+            msg = {
+                "type": "flex",
+                "altText": "Flex Message",
+                "contents": {
+                  "type": "bubble",
+                  "hero": {
+                    "type": "image",
+                    "url": "https://www.bltbangkok.com/public/core/uploaded/article/thumb/874378feadce02992df6cee5d8ccdf1c.jpg",
+                    "size": "full",
+                    "aspectRatio": "20:13",
+                    "aspectMode": "cover",
+                    "action": {
+                      "type": "uri",
+                      "label": "Action",
+                      "uri": "https://linecorp.com"
+                    }
+                  },
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "md",
+                    "action": {
+                      "type": "uri",
+                      "label": "Action",
+                      "uri": "https://linecorp.com"
+                    },
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Melom",
+                        "size": "xl",
+                        "weight": "bold"
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "spacing": "sm",
+                        "contents": [
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "contents": [
+                              {
+                                "type": "icon",
+                                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_regular_32.png"
+                              },
+                              {
+                                "type": "text",
+                                "text": "$6.5",
+                                "flex": 0,
+                                "margin": "sm",
+                                "weight": "bold"
+                              },
+                              {
+                                "type": "text",
+                                "text": "10kcl",
+                                "size": "sm",
+                                "align": "end",
+                                "color": "#AAAAAA"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "contents": [
+                              {
+                                "type": "icon",
+                                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_large_32.png"
+                              },
+                              {
+                                "type": "text",
+                                "text": "$8.9",
+                                "flex": 0,
+                                "margin": "sm",
+                                "weight": "bold"
+                              },
+                              {
+                                "type": "text",
+                                "text": "5kcl",
+                                "size": "sm",
+                                "align": "end",
+                                "color": "#AAAAAA"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "Sauce, Melon",
+                        "size": "xxs",
+                        "color": "#AAAAAA",
+                        "wrap": true
+                      }
+                    ]
+                  },
+                  "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "spacer",
+                        "size": "xxl"
+                      },
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "Add to Cart",
+                          "uri": "https://linecorp.com"
+                        },
+                        "color": "#905C44",
+                        "style": "primary"
+                      }
+                    ]
+                  }
+                }
+              }
         }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
