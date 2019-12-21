@@ -35,10 +35,10 @@ function handleEvent(event){
     console.log(event);
     if (event.type === 'message' && event.message.type === 'text') {//ถ้าเป็นรูปหรือติ้กเกอร์ให้ออกข้างนอก
         handleMessageText(event);
-    if (event.type === 'message' && event.message.type === 'image'){
+        
+    } else if (event.type === 'message' && event.message.type === 'image'){
         handleMessageImage(event)
-    }
-    } else {
+    }else {
         return Promise.resolve(null);
     }
 }
