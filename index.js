@@ -69,7 +69,7 @@ function handleMessageImage(event) {//ถ้าส่งเป็นรูป �
 function handleMessageText(event) {
     var msg = {
         type: 'text',
-        text: 'please choose -> qr for coupon,samphran location,template button,slide,line quick reply,website,gal,pb,day,capture,location,hello'
+        text: 'please choose -> qr for coupon,samphran location,template button,slide,quickreply,website,gal,pb,day,capture,location,hello'
     };
 
     var eventText = event.message.text.toLowerCase();
@@ -111,7 +111,7 @@ function handleMessageText(event) {
     
 
 //พิมqrมาให้ส่งเป็นรูปกลับไป
-    }else if (eventText === 'qr for coupon') {
+    }else if (eventText === 'qr for coupon') {//qrcoupon
 
         image = "https://uppic.cc/d/5UEF"
         msg = {
@@ -213,7 +213,7 @@ function handleMessageText(event) {
         // };
         // Mail.send(mailMessage);
 //ส่งที่อยู่ทีซ็ตไว้
-    }else if (eventText === 'samphran location') {
+    }else if (eventText === 'samphran location') {//ที่อยู่สามพราน
     msg = {
             "type": "location",
             "title": "my location",
@@ -222,7 +222,7 @@ function handleMessageText(event) {
             "longitude": 100.198928
         }
 //สร้างtemplate button
-    } else if (eventText === 'template button') {
+    } else if (eventText === 'template button') {//template
         msg = {
             "type": "template",
             "altText": "this is a buttons template",
@@ -247,7 +247,7 @@ function handleMessageText(event) {
             }
         }
 //พิมhelloมาจะมีช่องขึ้นให้เลือก 
-    } else if (eventText === 'hello') {
+    } else if (eventText === 'hello') {//hi
         msg = {
             "type": "text",
             "altText": "Hello Quick reply",
@@ -266,7 +266,7 @@ function handleMessageText(event) {
             }
         } 
 //ทำสไลด์
-    } else if (eventText === 'slide') {
+    } else if (eventText === 'slide') {//slide
         msg = {
             "type": "template",
             "altText": "this is a carousel template",
@@ -320,7 +320,7 @@ function handleMessageText(event) {
                 ]
             }
         }
-    } else if (eventText === 'quickreply'){
+    } else if (eventText === 'quickreply'){//quickreply
         msg = {
         "type": "text",
         "text": "Quick Reply!",
@@ -373,15 +373,15 @@ function handleMessageText(event) {
                 "label": "Datetime Picker",
                 "data": "storeId=12345",
                 "mode": "datetime",
-                "initial": "2018-08-10t00:00",
-                "max": "2018-12-31t23:59",
-                "min": "2018-08-01t00:00"
+                "initial": "2019-12-01T00:00",
+                "max": "2029-12-31T23:59",
+                "min": "2001-01-01T00:00"
               }
             }
           ]
         }
       }
-    } else if (eventText === 'website'){
+    } else if (eventText === 'website'){//flex
         msg = [{
             "type": "flex",
             "altText": "This is a Flex Message",
@@ -405,7 +405,7 @@ function handleMessageText(event) {
              }
             }
            }]
-    } else if (eventText === 'gal'){
+    } else if (eventText === 'gal'){//gallary
         msg = [
             {
              "type": "text",
@@ -423,7 +423,7 @@ function handleMessageText(event) {
              }
             }
            ]
-    } else if (eventText === 'pb'){
+    } else if (eventText === 'pb'){//postback
         msg = [
             {
              "type": "text",
@@ -442,7 +442,7 @@ function handleMessageText(event) {
              }
             }
             ]
-    } else if (eventText === 'day'){
+    } else if (eventText === 'day'){//date
         msg = [
             {
              "type": "text",
@@ -465,7 +465,7 @@ function handleMessageText(event) {
              }
             }
            ]
-    } else if (eventText === 'capture'){
+    } else if (eventText === 'capture'){//camera
         msg = [
             {
              "type": "text",
@@ -483,7 +483,7 @@ function handleMessageText(event) {
              }
             }
            ]
-    } else if (eventText === 'location'){
+    } else if (eventText === 'location'){//location
         msg =[
             {
              "type": "text",
@@ -501,7 +501,189 @@ function handleMessageText(event) {
              }
             }
            ]
-    } 
+    } else if (eventText === 't') {
+        msg = {
+            "type": "flex",
+            "altText": "Flex Message",
+            "contents": {
+              "type": "carousel",
+              "contents": [
+                {
+                  "type": "bubble",
+                  "hero": {
+                    "type": "image",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_5_carousel.png",
+                    "size": "full",
+                    "aspectRatio": "20:13",
+                    "aspectMode": "cover"
+                  },
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Arm Chair, White",
+                        "size": "xl",
+                        "weight": "bold",
+                        "wrap": true
+                      },
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "$49",
+                            "flex": 0,
+                            "size": "xl",
+                            "weight": "bold",
+                            "wrap": true
+                          },
+                          {
+                            "type": "text",
+                            "text": ".99",
+                            "flex": 0,
+                            "size": "sm",
+                            "weight": "bold",
+                            "wrap": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "Add to Cart",
+                          "uri": "https://linecorp.com"
+                        },
+                        "style": "primary"
+                      },
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "Add to whishlist",
+                          "uri": "https://linecorp.com"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "bubble",
+                  "hero": {
+                    "type": "image",
+                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png",
+                    "size": "full",
+                    "aspectRatio": "20:13",
+                    "aspectMode": "cover"
+                  },
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Metal Desk Lamp",
+                        "size": "xl",
+                        "weight": "bold",
+                        "wrap": true
+                      },
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "flex": 1,
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "$11",
+                            "flex": 0,
+                            "size": "xl",
+                            "weight": "bold",
+                            "wrap": true
+                          },
+                          {
+                            "type": "text",
+                            "text": ".99",
+                            "flex": 0,
+                            "size": "sm",
+                            "weight": "bold",
+                            "wrap": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "Temporarily out of stock",
+                        "flex": 0,
+                        "margin": "md",
+                        "size": "xxs",
+                        "color": "#FF5551",
+                        "wrap": true
+                      }
+                    ]
+                  },
+                  "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "Add to Cart",
+                          "uri": "https://linecorp.com"
+                        },
+                        "flex": 2,
+                        "color": "#AAAAAA",
+                        "style": "primary"
+                      },
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "Add to wish list",
+                          "uri": "https://linecorp.com"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "bubble",
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "See more",
+                          "uri": "https://linecorp.com"
+                        },
+                        "flex": 1,
+                        "gravity": "center"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+    }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
 }
