@@ -69,7 +69,7 @@ function handleMessageImage(event) {//ถ้าส่งเป็นรูป �
 function handleMessageText(event) {
     var msg = {
         type: 'text',
-        text: 'please choose -> qr for coupon,samphran location,template button,slide,quickreply,website,gal,pb,day,capture,location,hello'
+        text: 'please choose -> qr for coupon,samphran location,template button,slide,quickreply,website,gal,pb,day,capture,location,hello,buy,sookjai'
     };
 
     var eventText = event.message.text.toLowerCase();
@@ -501,7 +501,7 @@ function handleMessageText(event) {
              }
             }
            ]
-    } else if (eventText === 'buy') {
+    } else if (eventText === 'buy') {//flex avocado
         msg = {
             "type": "flex",
             "altText": "Flex Message",
@@ -683,6 +683,162 @@ function handleMessageText(event) {
               ]
             }
           }
+        }else if (eventText === 'sookjai'){
+            msg = {
+                "type": "flex",
+                "altText": "Flex Message",
+                "contents": {
+                  "type": "bubble",
+                  "hero": {
+                    "type": "image",
+                    "url": "https://img.ryt9.com/img/files/20191112/iqf4b31bb9578d434d0baf97e9fc552bbb-0.jpg",
+                    "size": "full",
+                    "aspectRatio": "20:13",
+                    "aspectMode": "cover",
+                    "action": {
+                      "type": "uri",
+                      "label": "Line",
+                      "uri": "https://linecorp.com/"
+                    }
+                  },
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "fram sookjai",
+                        "size": "xl",
+                        "weight": "bold"
+                      },
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "margin": "md",
+                        "contents": [
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "icon",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png",
+                            "size": "sm"
+                          },
+                          {
+                            "type": "text",
+                            "text": "4.0",
+                            "flex": 0,
+                            "margin": "md",
+                            "size": "sm",
+                            "color": "#999999"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "spacing": "sm",
+                        "margin": "lg",
+                        "contents": [
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "text": "Place",
+                                "flex": 1,
+                                "size": "sm",
+                                "color": "#AAAAAA"
+                              },
+                              {
+                                "type": "text",
+                                "text": "samphran, Thailand",
+                                "flex": 5,
+                                "size": "sm",
+                                "color": "#666666",
+                                "wrap": true
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "layout": "baseline",
+                            "spacing": "sm",
+                            "contents": [
+                              {
+                                "type": "text",
+                                "text": "Time",
+                                "flex": 1,
+                                "size": "sm",
+                                "color": "#AAAAAA"
+                              },
+                              {
+                                "type": "text",
+                                "text": "9:00 - 19:00",
+                                "flex": 5,
+                                "size": "sm",
+                                "color": "#666666",
+                                "wrap": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "flex": 0,
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "CALL",
+                          "uri": "https://linecorp.com"
+                        },
+                        "height": "sm",
+                        "style": "link"
+                      },
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "uri",
+                          "label": "WEBSITE",
+                          "uri": "https://linecorp.com"
+                        },
+                        "height": "sm",
+                        "style": "link"
+                      },
+                      {
+                        "type": "spacer",
+                        "size": "sm"
+                      }
+                    ]
+                  }
+                }
+              }
         }
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
