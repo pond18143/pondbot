@@ -44,6 +44,7 @@ function handleEvent(event){
 }
 
 function handleMessageImage(event) {
+    console.log("handleMessageImage")
         var msg =[
             {
              "type": "text",
