@@ -14,7 +14,7 @@ const config = {
     channelAccessToken: 'EuztLcgzicM+DSpHCAivG7sxAvE/ZbViZmu/Fpxzua6YKcyMtDamhO/ImNx8rh7FzQ6yj5+ZNtornHl/YKtSO43tn/PiXhHveJTTyheu35xlqbqraCGtaPxCkeio2Y5GP0IU98KMinJeYYP/i3Y7iwdB04t89/1O/w1cDnyilFU=',//เวลาส่งมันจะส่งโทเค่นนี้ไปด้วย แล้วเอาไปเทียบ
     channelSecret: "974568fe6154f8eaeb19985e0847506c"//คีย์ดูว่ามันตรงกันไหมถึงจะตอบข้อความกลับไป เกิดขึ้นมากับตอนสร้าง
 };
-
+const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
 const client = new line.Client(config);//สร้างออบเจค โดย รับคีย์configเข้ามา
 //post ข้อความอยู่หลังอ่านไม่ออก อยู่ในกล่องไม่มีใครเห็น
 //get ข้อความแบบเห็นได้หมด
@@ -476,7 +476,7 @@ function handleMessageEvent(event) {
              }
             }
            ]
-    }
+    } else if ()
     
     return client.replyMessage(event.replyToken, msg);//client คือบอทที่จะตอบกลับไปข้อความตามข้างบน
 }
