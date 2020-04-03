@@ -43,6 +43,51 @@ function handleEvent(event){
     }
 }
 
+function doGet(e) {
+  var ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1QrOs0PcAxnnP21OwFxhvzsbPShwpdyg7ElXPI6bljTc/edit?usp=sharing");
+  var sheet = ss.getSheetByName("cover-19");
+
+  var covid19UpdateDate = sheet.getRange(2,9).getValue(); 
+  
+  var url = "https://covid19.th-stat.com/api/open/today";
+  var headers = {"contentType": "application/json"};
+  var getdata = UrlFetchApp.fetch(url, headers);
+  var covid19data = JSON.parse(getdata.getContentText());
+  
+  var Confirmed = covid19data.Confirmed;
+  var Recovered = covid19data.Recovered;
+  var Hospitalized = covid19data.Hospitalized;
+  var Deaths = covid19data.Deaths;
+  var NewConfirmed = covid19data.NewConfirmed;
+  var NewRecovered = covid19data.NewRecovered;
+  var NewHospitalized = covid19data.NewHospitalized;
+  var NewDeaths = covid19data.NewDeaths;
+  var UpdateDate = covid19data.UpdateDate;
+  
+  
+   Logger.log("\n"+covid19UpdateDate+"\n"+UpdateDate); 
+  if(covid19UpdateDate !== UpdateDate){
+    
+    sheet.getRange(2,1).setValue(Confirmed);
+    sheet.getRange(2,2).setValue(Recovered);
+    sheet.getRange(2,3).setValue(Hospitalized);
+    sheet.getRange(2,4).setValue(Deaths);
+    sheet.getRange(2,5).setValue(NewConfirmed);
+    sheet.getRange(2,6).setValue(NewRecovered);
+    sheet.getRange(2,7).setValue(NewHospitalized);
+    sheet.getRange(2,8).setValue(NewDeaths);
+    sheet.getRange(2,9).setValue('="'+UpdateDate+'"');
+
+    var options = {
+  'method' : 'post',
+  'contentType': 'application/x-www-form-urlencoded',
+  'headers':{'Authorization': 'Bearer AN9vGKcggFyQiSrwHlWivgZR5DrfGkbnvemv4ykOk1p'},
+      'payload' : {'message': "\nติดเชื้อสะสม : "+Confirmed+"\nหายแล้ว : "+Recovered+"\nรักษาอยู่ใน รพ. : "+Hospitalized+"\nเสียชีวิต : "+Deaths+"\nเพิ่มขึ้น : "+NewConfirmed+"\nรักษาหายเพิ่มขึ้น : "+NewRecovered+"\nอยู่ใน รพ. เพิ่มขึ้น : "+NewHospitalized+"\nเสียชีวิตเพิ่มขึ้น : "+NewDeaths+"\nอัพเดทข้อมูลล่าสุด : "+UpdateDate}
+};
+      UrlFetchApp.fetch('https://notify-api.line.me/api/notify', options);
+  }
+  }
+
 function handleMessageImage(event) {//ถ้าส่งเป็นรูป จะขึ้นquick location
     console.log("handleMessageImage")
         var msg =[
