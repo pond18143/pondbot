@@ -43,6 +43,7 @@ function handleEvent(event){
     }
 }
 
+
 function doGet(e) {
   var ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1QrOs0PcAxnnP21OwFxhvzsbPShwpdyg7ElXPI6bljTc/edit?usp=sharing");
   var sheet = ss.getSheetByName("cover-19");
@@ -81,7 +82,7 @@ function doGet(e) {
     var options = {
   'method' : 'post',
   'contentType': 'application/x-www-form-urlencoded',
-  'headers':{'Authorization': 'Bearer AN9vGKcggFyQiSrwHlWivgZR5DrfGkbnvemv4ykOk1p'},
+  'headers':{'Authorization': 'Bearer FGqwxLl6ALtKRD9R0Wdh7xRJsTwTXdxNVTPiSLpV6hT'},
       'payload' : {'message': "\nติดเชื้อสะสม : "+Confirmed+"\nหายแล้ว : "+Recovered+"\nรักษาอยู่ใน รพ. : "+Hospitalized+"\nเสียชีวิต : "+Deaths+"\nเพิ่มขึ้น : "+NewConfirmed+"\nรักษาหายเพิ่มขึ้น : "+NewRecovered+"\nอยู่ใน รพ. เพิ่มขึ้น : "+NewHospitalized+"\nเสียชีวิตเพิ่มขึ้น : "+NewDeaths+"\nอัพเดทข้อมูลล่าสุด : "+UpdateDate}
 };
       UrlFetchApp.fetch('https://notify-api.line.me/api/notify', options);
