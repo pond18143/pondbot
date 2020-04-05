@@ -111,17 +111,6 @@ function handleMessageImage(event) {//ถ้าส่งเป็นรูป �
     
     return client.replyMessage(event.replyToken, msg)
 }
-function handleMessageText(event) {
-  if (eventText === 'covid') 
-    msg =({method: `GET`,
-    uri:`covid19.th-stat.com/api/open/today`,
-    json: true
-    
-  }).then((response) => {
-    const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
-    return client.replyMessage(event.replyToken, msg)
-  });
-}
 //ถ้าส่งข้อความอื่นมาให้ตอบไปว่า สวัสดีครัช
 function handleMessageText(event) {
     var msg = {
@@ -131,7 +120,14 @@ function handleMessageText(event) {
 
     var eventText = event.message.text.toLowerCase();
     
-  
+    if (eventText === 'covid') {
+      msg =({method: `GET`,
+      uri:`covid19.th-stat.com/api/open/today`,
+      json: true
+    }).then((response) => {
+      const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
+      return message;
+    });
 //พิมพ์jonathanมาให้้ส่งเป็นรูปกลับไป
     if (eventText === 'jonathan') {
         image = "https://cdn-az.allevents.in/banners/f61431b914da8334156a58b5568061b4"
@@ -140,7 +136,7 @@ function handleMessageText(event) {
             'originalContentUrl': image,
             'previewImageUrl': image
         }
-      
+      }
 
 
         // const mailMessage = {
