@@ -129,14 +129,12 @@ function handleMessageText(event) {
             'previewImageUrl': image
         }
       }else if (eventText === 'covid') {
-        return request({method: `GET`,
+        msg =({method: `GET`,
         uri:`covid19.th-stat.com/api/open/today`,
         json: true
       }).then((response) => {
         const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
-        return push(res, message);
-      }).catch((error) => {
-        return res.status(500).send(error);
+        return message;
       });
 
 
