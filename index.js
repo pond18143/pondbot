@@ -134,15 +134,14 @@ function handleMessageText(event) {
     const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}` ;
     msg =({method: `GET`,
     uri:`covid19.th-stat.com/api/open/today`,    
-    json: true
-    }).then(response => {
+    json: true,
       messages: [
         {
           type: "text",
           text: message
         }
       ]
-    })
+    }) 
     
 
         // const mailMessage = {
