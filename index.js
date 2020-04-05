@@ -145,9 +145,6 @@ function handleMessageText(event) {
       var NewDeaths = covid19data.NewDeaths;
       var UpdateDate = covid19data.UpdateDate;
       msg = {
-        'method' : 'post',
-        'contentType': 'application/x-www-form-urlencoded',
-        'headers':{'Authorization': 'Bearer 974568fe6154f8eaeb19985e0847506c'},
             'payload' : {'message': "\nติดเชื้อสะสม : "+Confirmed+"\nหายแล้ว : "+Recovered+"\nรักษาอยู่ใน รพ. : "+Hospitalized+"\nเสียชีวิต : "+Deaths+"\nเพิ่มขึ้น : "+NewConfirmed+"\nรักษาหายเพิ่มขึ้น : "+NewRecovered+"\nอยู่ใน รพ. เพิ่มขึ้น : "+NewHospitalized+"\nเสียชีวิตเพิ่มขึ้น : "+NewDeaths+"\nอัพเดทข้อมูลล่าสุด : "+UpdateDate}
       };
       UrlFetchApp.fetch(msg);
