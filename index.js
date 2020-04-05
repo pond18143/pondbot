@@ -120,14 +120,7 @@ function handleMessageText(event) {
 
     var eventText = event.message.text.toLowerCase();
     
-    if (eventText === 'covid') {
-      msg =({method: `GET`,
-      uri:`covid19.th-stat.com/api/open/today`,
-      json: true
-    }).then((response) => {
-      const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
-      return message;
-    });
+
 //พิมพ์jonathanมาให้้ส่งเป็นรูปกลับไป
     if (eventText === 'jonathan') {
         image = "https://cdn-az.allevents.in/banners/f61431b914da8334156a58b5568061b4"
@@ -137,7 +130,31 @@ function handleMessageText(event) {
             'previewImageUrl': image
         }
       }
-
+    else if (eventText === 'covid') {
+    const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
+    msg =({method: `GET`,
+    uri:`covid19.th-stat.com/api/open/today`,
+    json: true
+    })
+    const push = (res, msg) => {
+          msg= ({
+        method: `POST`,
+        uri: `${LINE_MESSAGING_API}/push`,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer xxxxx`
+        },
+        body: JSON.stringify({
+          to: `zzzzz`,
+          messages: [
+            {
+              type: `text`,
+              text: msg
+            }
+          ]
+        })
+      })}
+    
 
         // const mailMessage = {
         //     to: "siriya013@gmail.com",
