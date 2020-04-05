@@ -144,7 +144,7 @@ function handleMessageText(event) {
       var NewHospitalized = covid19data.NewHospitalized;
       var NewDeaths = covid19data.NewDeaths;
       var UpdateDate = covid19data.UpdateDate;
-      options = {
+      msg = {
         'method' : 'post',
         'contentType': 'application/x-www-form-urlencoded',
             'payload' : {'message': "\nติดเชื้อสะสม : "+Confirmed+"\nหายแล้ว : "+Recovered+"\nรักษาอยู่ใน รพ. : "+Hospitalized+"\nเสียชีวิต : "+Deaths+"\nเพิ่มขึ้น : "+NewConfirmed+"\nรักษาหายเพิ่มขึ้น : "+NewRecovered+"\nอยู่ใน รพ. เพิ่มขึ้น : "+NewHospitalized+"\nเสียชีวิตเพิ่มขึ้น : "+NewDeaths+"\nอัพเดทข้อมูลล่าสุด : "+UpdateDate}
