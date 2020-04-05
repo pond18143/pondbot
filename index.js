@@ -134,7 +134,26 @@ function handleMessageText(event) {
     msg =({method: `GET`,
     uri:`covid19.th-stat.com/api/open/today`,
     json: true
-    })
+    }).then((response) => {
+    const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
+    return push(res, message);
+  })
+    const push = (res, msg) => {
+          msg= ({
+        method: `POST`,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `EuztLcgzicM+DSpHCAivG7sxAvE/ZbViZmu/Fpxzua6YKcyMtDamhO/ImNx8rh7FzQ6yj5+ZNtornHl/YKtSO43tn/PiXhHveJTTyheu35xlqbqraCGtaPxCkeio2Y5GP0IU98KMinJeYYP/i3Y7iwdB04t89/1O/w1cDnyilFU=`
+        },
+        body: JSON.stringify({
+          messages: [
+            {
+              type: `text`,
+              text: msg
+            }
+          ]
+        })
+      })}
     
 
         // const mailMessage = {
