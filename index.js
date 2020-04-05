@@ -131,7 +131,7 @@ function handleMessageText(event) {
         }
       }
     else if (eventText === 'covid') {
-    const message = `Confirmed: ${Confirmed}\nRecovered: ${Recovered}` ;
+    message = `Confirmed: ${response.Confirmed}\nRecovered: ${responseRecovered}` ;
     msg =({method: `GET`,
     uri:`covid19.th-stat.com/api/open/today`,    
     json: true,
