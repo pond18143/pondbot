@@ -131,16 +131,34 @@ function handleMessageText(event) {
         }
       }
     else if (eventText === 'covid') {
-    message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
-    msg =({method: `GET`,
-    uri:`covid19.th-stat.com/api/open/today`,    
-    json: true,}) 
-      messages [
-        {
-          type: "text",
-          text: message
-        }
-      ]
+      var url = "http://covid19.th-stat.com/api/open/today"
+      var headers = {"contentType": "application/json"};
+      var getdata = UrlFetchApp.fetch(url, headers);
+      var covid19data = JSON.parse(getdata.getContentText()); 
+      var Confirmed = covid19data.Confirmed;
+      var Recovered = covid19data.Recovered;
+      var Hospitalized = covid19data.Hospitalized;
+      var Deaths = covid19data.Deaths;
+      var NewConfirmed = covid19data.NewConfirmed;
+      var NewRecovered = covid19data.NewRecovered;
+      var NewHospitalized = covid19data.NewHospitalized;
+      var NewDeaths = covid19data.NewDeaths;
+      var UpdateDate = covid19data.UpdateDate;
+      msg = {
+        type:"text",
+        text:covid19data
+      }
+
+    // message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
+    // msg =({method: `GET`,
+    // uri:`covid19.th-stat.com/api/open/today`,    
+    // json: true,}) 
+    //   messages [
+    //     {
+    //       type: "text",
+    //       text: message
+    //     }
+    //   ]
     
     
 
