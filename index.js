@@ -133,7 +133,7 @@ function handleMessageText(event) {
     else if (eventText === 'covid') {
       var uri = "http://covid19.th-stat.com/api/open/today"
       var headers = {"contentType": "application/json"};
-      var getdata = UrlFetchApp.fetch(url, headers);
+      var getdata = UrlFetchApp.fetch(uri, headers);
       var covid19data = JSON.parse(getdata.getContentText()); 
       var Confirmed = covid19data.Confirmed;
       var Recovered = covid19data.Recovered;
