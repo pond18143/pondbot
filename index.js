@@ -131,21 +131,21 @@ function handleMessageText(event) {
         }
       }
     else if (eventText === 'covid') {
-    const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
     msg =({method: `GET`,
     uri:`covid19.th-stat.com/api/open/today`,
     json: true
-    })
+    }).then((response) => {
+    const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
+    return push(res, message);
+  })
     const push = (res, msg) => {
           msg= ({
         method: `POST`,
-        uri: `${LINE_MESSAGING_API}/push`,
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer xxxxx`
         },
         body: JSON.stringify({
-          to: `zzzzz`,
           messages: [
             {
               type: `text`,
