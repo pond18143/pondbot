@@ -133,15 +133,15 @@ function handleMessageText(event) {
     else if (eventText === 'covid') {
     message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
     msg =({method: `GET`,
-    url:`covid19.th-stat.com/api/open/today`,    
-    json: true,
+    uri:`covid19.th-stat.com/api/open/today`,    
+    json: true,}) 
       messages: [
         {
           type: "text",
           text: message
         }
       ]
-    }) 
+    
     
 
         // const mailMessage = {
