@@ -136,7 +136,7 @@ function handleMessageText(event) {
     json: true
     }).then((response) => {
     const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
-    return push(res, message);
+    return message;
   })
     
 
