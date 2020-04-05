@@ -131,7 +131,7 @@ function handleMessageText(event) {
         }
       }
     else if (eventText === 'covid') {
-      var url = "http://covid19.th-stat.com/api/open/today"
+      var uri = "http://covid19.th-stat.com/api/open/today"
       var headers = {"contentType": "application/json"};
       var getdata = UrlFetchApp.fetch(url, headers);
       var covid19data = JSON.parse(getdata.getContentText()); 
