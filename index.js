@@ -138,22 +138,6 @@ function handleMessageText(event) {
     const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}`;
     return push(res, message);
   })
-    const push = (res, msg) => {
-          msg= ({
-        method: `POST`,
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer xxxxx`
-        },
-        body: JSON.stringify({
-          messages: [
-            {
-              type: `text`,
-              text: msg
-            }
-          ]
-        })
-      })}
     
 
         // const mailMessage = {
