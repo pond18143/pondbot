@@ -135,7 +135,7 @@ function handleMessageText(event) {
     msg =({method: `GET`,
     uri:`covid19.th-stat.com/api/open/today`,    
     json: true
-    }).then((response) => {
+    }).then(response => {
       messages: [
         {
           type: "text",
