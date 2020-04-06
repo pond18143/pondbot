@@ -168,10 +168,10 @@ function handleMessageText(event) {
       json: true}).then((response) => {
     const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
       return message })
-    msg ={
+    msg =[{
       'type':'text',
       'text':message
-    }
+    }]
   
   
   
