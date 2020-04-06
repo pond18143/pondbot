@@ -169,8 +169,8 @@ function handleMessageText(event) {
     const message = `Confirmed: ${res.Confirmed}\nRecovered: ${res.Recovered}\nHospitalized: ${res.Hospitalized}\nDeaths: ${res.Deaths}\nNewConfirmed: ${res.NewConfirmed}\nNewRecovered: ${res.NewRecovered}\nNewHospitalized: ${co.NewHospitalized}\nNewNewDeaths: ${res.NewDeaths}\nUpdateDate: ${res.UpdateDate}`;
 
     msg ={
-      'type':'text',
-      'text':message
+      type:'text',
+      text:message
     }
     // co = 
     // ({method:`GET`,
