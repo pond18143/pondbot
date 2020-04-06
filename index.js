@@ -167,13 +167,13 @@ function handleMessageText(event) {
       uri:`covid19.th-stat.com/api/open/today`,
       json: true}).then((response) => {
      const message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`
- 
+   })
     msg =[{
       type:`text`,
       text:message
     }]
     return msg
-  })
+
   
   
     
