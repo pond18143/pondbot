@@ -162,11 +162,11 @@ function handleMessageText(event) {
     //       text: message
     //     }
     //   ]
-    co = 
+
     ({method:`GET`,
       uri:`covid19.th-stat.com/api/open/today`,
       json: true,})
-    message = `Confirmed: ${response.co.Confirmed}\nRecovered: ${co.Recovered}\nHospitalized: ${co.Hospitalized}\nDeaths: ${co.Deaths}\nNewConfirmed: ${co.NewConfirmed}\nNewRecovered: ${co.NewRecovered}\nNewHospitalized: ${co.NewHospitalized}\nNewNewDeaths: ${co.NewDeaths}\nUpdateDate: ${co.UpdateDate}`;
+    message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
 
     msg ={
       'type':'text',
