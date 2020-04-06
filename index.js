@@ -172,6 +172,7 @@ function handleMessageText(event) {
       type:`text`,
       text:message
     }]
+    return msg
   })
   
   
