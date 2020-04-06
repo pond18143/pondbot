@@ -169,8 +169,8 @@ function handleMessageText(event) {
      message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
       return (res,message) })
     msg =[{
-      'type':'text',
-      'text':message
+      type:'text',
+      text:message
     }]
   
   
