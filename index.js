@@ -131,26 +131,26 @@ function handleMessageText(event) {
         }
       }
     else if (eventText === 'covid') {
-      var url = "http://covid19.th-stat.com/api/open/today"
-      var headers = {"contentType": "application/json"};
-      var getdata = UrlFetchApp.fetch(url, headers);
-      var covid19data = JSON.parse(getdata.getContentText()); 
-      var Confirmed = covid19data.Confirmed;
-      var Recovered = covid19data.Recovered;
-      var Hospitalized = covid19data.Hospitalized;
-      var Deaths = covid19data.Deaths;
-      var NewConfirmed = covid19data.NewConfirmed;
-      var NewRecovered = covid19data.NewRecovered;
-      var NewHospitalized = covid19data.NewHospitalized;
-      var NewDeaths = covid19data.NewDeaths;
-      var UpdateDate = covid19data.UpdateDate;
-      msg = {
-        'method' : 'post',
-        'contentType': 'application/x-www-form-urlencoded',
-        'headers':{'Authorization': 'Bearer 974568fe6154f8eaeb19985e0847506c'},
-            'payload' : {'message': "\nติดเชื้อสะสม : "+Confirmed+"\nหายแล้ว : "+Recovered+"\nรักษาอยู่ใน รพ. : "+Hospitalized+"\nเสียชีวิต : "+Deaths+"\nเพิ่มขึ้น : "+NewConfirmed+"\nรักษาหายเพิ่มขึ้น : "+NewRecovered+"\nอยู่ใน รพ. เพิ่มขึ้น : "+NewHospitalized+"\nเสียชีวิตเพิ่มขึ้น : "+NewDeaths+"\nอัพเดทข้อมูลล่าสุด : "+UpdateDate}
-      };
-      UrlFetchApp.fetch(msg);
+      // var url = "http://covid19.th-stat.com/api/open/today"
+      // var headers = {"contentType": "application/json"};
+      // var getdata = UrlFetchApp.fetch(url, headers);
+      // var covid19data = JSON.parse(getdata.getContentText()); 
+      // var Confirmed = covid19data.Confirmed;
+      // var Recovered = covid19data.Recovered;
+      // var Hospitalized = covid19data.Hospitalized;
+      // var Deaths = covid19data.Deaths;
+      // var NewConfirmed = covid19data.NewConfirmed;
+      // var NewRecovered = covid19data.NewRecovered;
+      // var NewHospitalized = covid19data.NewHospitalized;
+      // var NewDeaths = covid19data.NewDeaths;
+      // var UpdateDate = covid19data.UpdateDate;
+      // msg = {
+      //   'method' : 'post',
+      //   'contentType': 'application/x-www-form-urlencoded',
+      //   'headers':{'Authorization': 'Bearer 974568fe6154f8eaeb19985e0847506c'},
+      //       'payload' : {'message': "\nติดเชื้อสะสม : "+Confirmed+"\nหายแล้ว : "+Recovered+"\nรักษาอยู่ใน รพ. : "+Hospitalized+"\nเสียชีวิต : "+Deaths+"\nเพิ่มขึ้น : "+NewConfirmed+"\nรักษาหายเพิ่มขึ้น : "+NewRecovered+"\nอยู่ใน รพ. เพิ่มขึ้น : "+NewHospitalized+"\nเสียชีวิตเพิ่มขึ้น : "+NewDeaths+"\nอัพเดทข้อมูลล่าสุด : "+UpdateDate}
+      // };
+      // UrlFetchApp.fetch(msg);
 
     // message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
     // msg =({method: `GET`,
@@ -162,6 +162,17 @@ function handleMessageText(event) {
     //       text: message
     //     }
     //   ]
+    msg = 
+    ({method:`GET`,
+      uri:`covid19.th-stat.com/api/open/today`,
+      json: true,})
+    message = `Confirmed: ${response.Confirmed}\nRecovered: ${response.Recovered}\nHospitalized: ${response.Hospitalized}\nDeaths: ${response.Deaths}\nNewConfirmed: ${response.NewConfirmed}\nNewRecovered: ${response.NewRecovered}\nNewHospitalized: ${response.NewHospitalized}\nNewNewDeaths: ${response.NewDeaths}\nUpdateDate: ${response.UpdateDate}`;
+
+    msg ={
+      'type':'text',
+      'text':message
+    }
+  
     
     
 
